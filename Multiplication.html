@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- key -->
+    <input type="text" onkeydown="console.log('key dawon')">
+    <button onclick="document.write('9.30')">the time is</button>
+    <input type="text" onkeyup="console.log('keyup')">
+    <button onclick="table()">table of five</button>
+</body>
+ 
+    <!-- mouse -->
+    <input type="text" onmousemove="console.log('mouse move')">
+    <input type="text" onmousedown="console.log('mouse dawon')">
+    <input type="text" onmouseup="console.log('mouse up')">
+
+   <!-- onchange -->
+   <input type="text" onchange="console.log('change')">
+   
+   <!-- function -->
+   <script>
+    function sub(){
+        let a = 26;
+        let b = 11;
+        document.write(a-b);
+    }
+    sub()
+
+        function table(){
+            let a=5;
+            for(let i=1; i<=10;i++){
+                const multi=i*a;
+                document.write(` ${a}*${i}*${multi}`);            }
+        }
+    
+
+   </script>
+</body>
+</html>
