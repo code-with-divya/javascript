@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+				initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #toggleButton {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #d85555;
+            border: 1px solid black;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block; 
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 10%;
+            cursor: pointer;
+        }
+
+        .on {
+            background-color: green;
+        }
+
+        .off {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="toggleButton">Toggle</button>
+    <div>
+        <img id="img" src="telephone.png" width="300" height="350" alt="">
+    </div>
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const img = document.getElementById('img');
+        let isOn = false;
+
+        
+        toggleButton.addEventListener('click', function () {
+            isOn = !isOn;
+
+            if (isOn) {
+                img.src =
+                    "phone.gif";
+                document.getElementById('div').appendChild(img);
+                toggleButton.textContent = 'On';
+
+            } else {
+                toggleButton.textContent = 'Off';
+                img.src =
+                    "telephone.png";
+                document.getElementById('div').appendChild(img);
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>

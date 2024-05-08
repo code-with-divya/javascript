@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operatore</title>
+</head>
+<body>
+
+    <input type="text" placeholder=" Enter the number" id="num1"><br><br>
+    <input type="text" placeholder=" Enter the number" id="num2">
+
+    <p id="Answer">Answer:-</p>
+    <!-- reset button -->
+    <button type="reset">reset</button> 
+
+
+    <!-- operatore button -->
+    <button onclick="sum()">sum</button><br>
+    <button onclick="sub()">substraction</button>
+    <button onclick="multi()">multiplication</button>
+    <button onclick="div()">division</button>
+    <button onclick="modul()">reset</button>    
+<script>
+        // sum calling function
+        function sum() {
+        let x = parseInt(document.getElementById('num1').value);
+        var y = parseInt(document.getElementById('num2').value);
+        let res = x+y 
+    
+        console.log(res)
+        document.getElementById("Answer").innerText=`Answer : ${res}`
+    } 
+
+  // subtraction calling function
+    function Sub() {
+        let x = parseInt(document.getElementById('num1').value);
+        var y = parseInt(document.getElementById('num2').value);
+        let res = x-y 
+    
+        console.log(res)
+        document.getElementById("Answer").innerText=`Answer : ${res}`
+
+    } 
+    // subtraction calling function
+    function multi() {
+        let x = parseInt(document.getElementById('num1').value);
+        var y = parseInt(document.getElementById('num2').value);
+        let res = x*y 
+    
+        console.log(res)
+        document.getElementById("Answer").innerText=`Answer : ${res}`
+
+    } 
+    // division calling function
+    function div() {
+        let x = parseInt(document.getElementById('num1').value);
+        var y = parseInt(document.getElementById('num2').value);
+        let res = x/y 
+    
+        console.log(res)
+        document.getElementById("Answer").innerText=`Answer : ${res}`
+
+    } 
+    // module calling function
+    function modul() {
+        let x = parseInt(document.getElementById('num1').value);
+        var y = parseInt(document.getElementById('num2').value);
+        let res = x%y 
+    
+        console.log(res)
+        document.getElementById("Answer").innerText=`Answer : ${res}`
+
+    } 
+    //reset calling function
+    function reset()
+    {
+    document.getElementById("num1").value=` `;
+    document.getElementById("num2").value=` `;
+    document.getElementById("Answer").innerText=Answer; ` `
+
+    }
+ </script>
+</body>
+</html>

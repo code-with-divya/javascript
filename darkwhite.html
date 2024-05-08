@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode Toggle</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+        .container {
+            padding: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Light/Dark Mode Toggle</h1>
+        <button class="button" id="mode-toggle">Toggle Mode</button>
+    </div>
+
+    <script>
+        const modeToggle = document.getElementById('mode-toggle');
+        const body = document.body;
+
+        modeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                // Switch to light mode
+                body.classList.remove('dark-mode');
+                modeToggle.textContent = 'Dark Mode';
+            } else {
+                // Switch to dark mode
+                body.classList.add('dark-mode');
+                modeToggle.textContent = 'Light Mode';
+            }
+        });
+
+        // Check user preference for dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.classList.add('dark-mode');
+            modeToggle.textContent = 'Light Mode';
+        }
+    </script>
+</body>
+</html>
