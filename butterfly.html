@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .a{
+        background-color: blueviolet;
+        border-radius: 1px solid pink;
+        height: 70px;
+        width: 30px;
+       }
+    </style>
+</head>
+<body>
+    <img src="./image/butterfly.png" alt="" height="200px" id="img1">
+    <br>
+    <button onclick="change()" id="a">change image</button>
+
+    <script>
+        let state=true;
+
+        function change(){
+            if(state==true){
+                document.getElementById("img1").src="./image/butterfly.png"
+                state=false;
+            }
+            else{
+                document.getElementById("img1").src="./image/butterfly1.png"
+                state=true;
+            }
+        }
+        
+    </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .dark {
+        background-color:black;
+
+    }
+
+    .light {
+        background-color: antiquewhite;
+    }
+</style>
+
+<body id="theme">
+
+    <button onclick="light()">Light</button>
+
+    <button onclick="dark()"> Dark</button>
+    <script>
+        function light() {
+            document.getElementById("theme").classList.add("light")
+            document.getElementById("theme").classList.remove("dark")
+        }
+
+        function dark() {
+            document.getElementById("theme").classList.add("dark")
+            document.getElementById("theme").classList.remove("light")
+        }
+    </script>
+
+
+</body>
+
+</html>
+
