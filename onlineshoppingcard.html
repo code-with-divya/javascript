@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product ince-decre</title>
+    <link href="https://cdn.jsdelivr.net/npm/boots5trap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    .cards {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 100px;
+        /* border: 1px solid black; */
+       
+    }
+
+    .btn {
+        display: flex;
+
+    }
+
+    button {
+        margin: 20px;
+    }
+
+    p {
+        margin: 20px;
+    }
+
+    h6 {
+        margin-top: 25px;
+    }
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <div class="cards">
+        <div class="card " style="width: 18rem;">
+            <img src="./image/fashionbrasalet.webp" class="card-img-top" alt="..." height="170px" width="170px">
+            <div class="card-body">
+                <h5 class="card-title">BRASALET</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="btn">
+                    <h6>Quantity:</h6>
+                    <button onclick="plus()"> +</button>
+                    <p id="number">1</p>
+                    <button onclick="minus()"> -</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" style="width: 18rem;">
+            <img src="./image/watch.webp" class="card-img-top" alt="..." height="170px" width="170px">
+            <div class="card-body">
+                <h5 class="card-title">WATCH</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="btn">
+                    <h6>Quantity:</h6>
+                    <button onclick="add()"> +</button>
+                    <p id="no">1</p>
+                    <button onclick="sub()"> -</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card" style="width: 18rem;">
+            <img src="./image/pandabag.webp" class="card-img-top" alt="..." height="170px" width="170px">
+            <div class="card-body">
+                <h5 class="card-title">PANDA BAG</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="btn">
+                    <h6>Quantity:</h6>
+                    <button onclick="positive()"> +</button>
+                    <p id="num">1</p>
+                    <button onclick="negative()"> -</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function minus() {
+
+            if (document.getElementById("number").innerText == 1) {
+                return
+            }
+            else {
+                let a = parseInt(document.getElementById("number").innerText)
+                result = a - 1
+
+                document.getElementById("number").innerText = `${result}` 
+                console.log("0")
+            }
+        }
+
+        function plus() {
+            if (document.getElementById("number").innerText == 10) {
+                return
+            }
+            else {
+                let a = parseInt(document.getElementById("number").innerText)
+                result = a + 1
+                document.getElementById("number").innerText = `${result}`
+                console.log("1")
+
+            }
+
+        }
+        function sub() {
+
+            if (document.getElementById("no").innerText == 1) {
+                return
+            }
+            else {
+                let a = parseInt(document.getElementById("no").innerText)
+                result = a - 1
+
+                document.getElementById("no").innerText = `${result}`
+                console.log("0")
+            }
+        }
+        function add() {
+            if (document.getElementById("no").innerText == 10) {
+                return
+            }
+            else {
+                let a = parseInt(document.getElementById("no").innerText)
+                result = a + 1
+                document.getElementById("no").innerText = `${result}`
+                console.log("1")
+
+            }
+        }
+        function positive() {
+            if (document.getElementById("num").innerText == 10) {
+                return
+            }
+            else {
+                let a = parseInt(document.getElementById("num").innerText)
+                result = a + 1
+                document.getElementById("num").innerText = `${result}`
+                console.log("1")
+
+            }
+
+        }
+        function negative() {
+
+            if (document.getElementById("num").innerText == 1) {
+                return
+            }
+            else {
+                let a = parseInt(document.getElementById("num").innerText)
+                result = a - 1
+
+                document.getElementById("num").innerText = `${result}`
+                console.log("0")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
