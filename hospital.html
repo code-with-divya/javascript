@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #medicationReminder {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div id="medicationReminder">
+        <h2>Medication Adherence Reminder</h2>
+        <p>Remember to take your medication:</p>
+        <button onclick="setReminder()">Set Reminder</button>
+    </div>
+    <script>
+        function setReminder() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes() + 1; // Add 1 minute for the reminder
+    const reminderTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hours, minutes);
+
+    setTimeout(function() {
+        alert("Time to take your medication!");
+    }, reminderTime - now);
+}
+    </script>
+</body>
+</html>
